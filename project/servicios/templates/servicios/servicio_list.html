@@ -1,12 +1,12 @@
 {% extends 'servicios/base.html' %}
 
 {% block header %}
-Servicios: Listado
+Servicios: Registros
 {% endblock header %}
 
 {% block main %}
         <button>
-        <a href="#"> Crear Registro</a>
+        <a href="{% url 'servicio_create' %}"> Crear Registro</a>
         </button>
     {% for object in object_list %}
         <p>{{ object.nombre | upper }} ${{ object.precio }}</p>
